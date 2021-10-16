@@ -3,7 +3,7 @@ txscript
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
 
-This package is forked from https://github.com/ltcsuite/whive/
+This package is forked from https://github.com/ltcsuite/ltc-txscript/
 
 Package txscript implements the whive transaction script language.  There is
 a comprehensive test suite.
