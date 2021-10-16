@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/nicholas-mwaura/whvd/wire"
+	"github.com/nicholas-mwaura/twhd/wire"
 )
 
 // TestParseOpcode tests for opcode parsing with bad data templates.

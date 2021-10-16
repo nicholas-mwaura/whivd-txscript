@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/nicholas-mwaura/whvd/btcec"
-	"github.com/nicholas-mwaura/whvd/wire"
+	"github.com/nicholas-mwaura/twhd/btcec"
+	"github.com/nicholas-mwaura/twhd/wire"
 )
 
 // ScriptFlags is a bitmask defining additional operations or tests that will be

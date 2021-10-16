@@ -15,9 +15,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nicholas-mwaura/whvd/chaincfg/chainhash"
-	"github.com/nicholas-mwaura/whvd/wire"
-	"github.com/nicholas-mwaura/whiveutil"
+	"github.com/nicholas-mwaura/twhd/chaincfg/chainhash"
+	"github.com/nicholas-mwaura/twhd/wire"
+	"github.com/nicholas-mwaura/twhutil"
 )
 
 // scriptTestName returns a descriptive test name for the given reference script
@@ -353,7 +353,7 @@ func testScripts(t *testing.T, tests [][]interface{}, useSigCache bool) {
 
 		var (
 			witness  wire.TxWitness
-			inputAmt whiveutil.Amount
+			inputAmt twhutil.Amount
 		)
 
 		// When the first field of the test data is a slice it contains
@@ -373,7 +373,7 @@ func testScripts(t *testing.T, tests [][]interface{}, useSigCache bool) {
 				continue
 			}
 
-			inputAmt, err = whiveutil.NewAmount(witnessData[len(witnessData)-1].(float64))
+			inputAmt, err = twhutil.NewAmount(witnessData[len(witnessData)-1].(float64))
 			if err != nil {
 				t.Errorf("%s: can't parse input amt: %v",
 					name, err)
@@ -553,7 +553,7 @@ testloop:
 			continue
 		}
 
-		tx, err := whiveutil.NewTxFromBytes(serializedTx)
+		tx, err := twhutil.NewTxFromBytes(serializedTx)
 		if err != nil {
 			t.Errorf("bad test (arg 2 not msgtx %v) %d: %v", err,
 				i, test)
@@ -708,7 +708,7 @@ testloop:
 			continue
 		}
 
-		tx, err := whiveutil.NewTxFromBytes(serializedTx)
+		tx, err := twhutil.NewTxFromBytes(serializedTx)
 		if err != nil {
 			t.Errorf("bad test (arg 2 not msgtx %v) %d: %v", err,
 				i, test)

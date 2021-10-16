@@ -1,6 +1,6 @@
 package txscript
 
-import "github.com/nicholas-mwaura/whvd/btcec"
+import "github.com/nicholas-mwaura/twhd/btcec"
 
 // Signable is a interface which represent something that knows how to sign some bytes
 type Signable interface {

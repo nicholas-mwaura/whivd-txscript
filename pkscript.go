@@ -5,10 +5,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nicholas-mwaura/whvd/btcec"
-	"github.com/nicholas-mwaura/whvd/chaincfg"
-	"github.com/nicholas-mwaura/whvd/wire"
-	"github.com/nicholas-mwaura/whiveutil"
+	"github.com/nicholas-mwaura/twhd/btcec"
+	"github.com/nicholas-mwaura/twhd/chaincfg"
+	"github.com/nicholas-mwaura/twhd/wire"
+	"github.com/nicholas-mwaura/twhutil"
 	"golang.org/x/crypto/ripemd160"
 )
 
@@ -141,7 +141,7 @@ func (s PkScript) Script() []byte {
 }
 
 // Address encodes the script into an address for the given chain.
-func (s PkScript) Address(chainParams *chaincfg.Params) (whiveutil.Address, error) {
+func (s PkScript) Address(chainParams *chaincfg.Params) (twhutil.Address, error) {
 	_, addrs, _, err := ExtractPkScriptAddrs(s.Script(), chainParams)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse address: %v", err)
